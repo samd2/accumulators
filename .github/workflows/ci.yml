@@ -329,7 +329,6 @@ jobs:
 
           echo '==================================> INSTALL AND COMPILE'
           set -e
-          set -x
           export TRAVIS_BUILD_DIR=$(pwd)
           export TRAVIS_BRANCH=${TRAVIS_BRANCH:-$(echo $GITHUB_REF | awk 'BEGIN { FS = "/" } ; { print $3 }')}
           export VCS_COMMIT_ID=$GITHUB_SHA
@@ -455,7 +454,6 @@ jobs:
 #           echo '==================================> PACKAGES'
 #           echo '==================================> INSTALL AND COMPILE'
 #           set -e
-#           set -x
 #           export TRAVIS_BUILD_DIR=$(pwd)
 #           export TRAVIS_BRANCH=${TRAVIS_BRANCH:-$(echo $GITHUB_REF | awk 'BEGIN { FS = "/" } ; { print $3 }')}
 #           export VCS_COMMIT_ID=$GITHUB_SHA
